@@ -24,8 +24,21 @@ WHERE LAT_N BETWEEN 38.7880 AND 137.2345
 
 
 #############################################
+#Weather Observation Station 15 - MySQL
+SELECT ROUND(MAX(LONG_W),4)
+FROM STATION 
+WHERE LAT_N = (SELECT MAX(LAT_N) FROM STATION WHERE LAT_N < 137.2345)
+
+
 
 #############################################
+#Weather Observation Station 17 - MySQL
+SELECT ROUND(MIN(LONG_W),4)
+FROM STATION 
+WHERE LAT_N = (SELECT MIN(LAT_N) FROM STATION WHERE LAT_N > 38.7780)
+
+
+
 
 #############################################
 
