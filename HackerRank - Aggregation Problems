@@ -1,4 +1,5 @@
-# Top Earners Problem
+####################################################
+#Top Earners Problem
 
 #Solution - MS SQL Server 
 
@@ -12,3 +13,7 @@ SELECT
     COUNT(*) AS num_employees_with_max_earnings
 FROM earnings
 WHERE t_earnings = (SELECT MAX(t_earnings) FROM earnings)
+
+
+
+#############################################
